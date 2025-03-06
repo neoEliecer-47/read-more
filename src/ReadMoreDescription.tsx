@@ -58,7 +58,7 @@ const ReadMoreDescription = ({
     <div className="max-w-[80rem] px-4 lg:px-8">
       <div
         ref={readMoreRef}
-        className="relative bg-black/90 text-white p-2 rounded-lg overflow-hidden transition-all"
+        className="relative bg-black/90 text-white p-2 rounded-lg overflow-hidden"
         style={{ height: dynamicHeight, maxWidth: "100%", transition: "height 200ms ease" }}
       >
         <div

@@ -33,7 +33,7 @@ const ReadMoreDescription = ({ description, title, initialHeight = 30, dangerous
             });
         }
     }, [hiddenText, initialHeight]);
-    return (_jsx("div", { className: "max-w-[80rem] px-4 lg:px-8", children: _jsxs("div", { ref: readMoreRef, className: "relative bg-black/90 text-white p-2 rounded-lg overflow-hidden transition-all", style: { height: dynamicHeight, maxWidth: "100%", transition: "height 200ms ease" }, children: [_jsx("div", { className: "w-full break-words text-white", style: { wordBreak: "break-word", whiteSpace: "normal" }, children: dangerousHtml ? (_jsx("div", { dangerouslySetInnerHTML: { __html: sinitizedHtml } })) : (_jsx("div", { children: textContent })) }), shouldTruncate && (_jsx("button", { "aria-expanded": !hiddenText, onClick: (e) => {
+    return (_jsx("div", { className: "max-w-[80rem] px-4 lg:px-8", children: _jsxs("div", { ref: readMoreRef, className: "relative bg-black/90 text-white p-2 rounded-lg overflow-hidden", style: { height: dynamicHeight, maxWidth: "100%", transition: "height 200ms ease" }, children: [_jsx("div", { className: "w-full break-words text-white", style: { wordBreak: "break-word", whiteSpace: "normal" }, children: dangerousHtml ? (_jsx("div", { dangerouslySetInnerHTML: { __html: sinitizedHtml } })) : (_jsx("div", { children: textContent })) }), shouldTruncate && (_jsx("button", { "aria-expanded": !hiddenText, onClick: (e) => {
                         e.stopPropagation();
                         setHiddenText(!hiddenText);
                     }, className: "absolute bottom-1 right-2 px-3 py-1 text-xs font-semibold text-white bg-purple-500 rounded-md hover:bg-purple-400 transition-all focus:outline-none", children: hiddenText ? "Read More" : "Show Less" }))] }) }));

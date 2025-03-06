@@ -1,7 +1,7 @@
 {
-  "name": "read-more-description",
+  "name": "read-more-descriptions",
   "packageManager": "yarn@4.4.0",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React Read More component for descriptions",
   "main": "dist/index.js",
   "module": "dist/index.js",

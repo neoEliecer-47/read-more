@@ -1272,9 +1272,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"read-more-description@workspace:.":
+"read-more-descriptions@workspace:.":
   version: 0.0.0-use.local
-  resolution: "read-more-description@workspace:."
+  resolution: "read-more-descriptions@workspace:."
   dependencies:
     "@types/dompurify": "npm:^3.0.0"
     "@types/react": "npm:^19.0.10"
