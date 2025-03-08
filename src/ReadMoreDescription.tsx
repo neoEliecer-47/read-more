@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import DOMpurify from 'dompurify'
+import DOMPurify from "isomorphic-dompurify"
 
 const ReadMoreDescription = ({
   description,
@@ -42,7 +42,7 @@ const ReadMoreDescription = ({
   const textContent = hiddenText ? truncatedText + (shouldTruncate ? "..." : "") : description;
  
 
-  const sinitizedHtml = useMemo(()=> DOMpurify.sanitize(textContent), [textContent])
+  const sinitizedHtml = useMemo(()=> DOMPurify.sanitize(textContent), [textContent])
 
   useEffect(() => {
     if (readMoreRef.current) {

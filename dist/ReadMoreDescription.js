@@ -1,7 +1,7 @@
 "use client";
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useEffect, useMemo, useRef, useState } from "react";
-import DOMpurify from 'dompurify';
+import DOMPurify from "isomorphic-dompurify";
 const ReadMoreDescription = ({ description, title, initialHeight = 30, dangerousHtml = true, }) => {
     const [hiddenText, setHiddenText] = useState(true);
     const [dynamicHeight, setDynamicHeight] = useState(`${initialHeight}rem`);
@@ -25,7 +25,7 @@ const ReadMoreDescription = ({ description, title, initialHeight = 30, dangerous
     const truncatedText = description.slice(0, maxLength);
     const shouldTruncate = description.length > maxLength;
     const textContent = hiddenText ? truncatedText + (shouldTruncate ? "..." : "") : description;
-    const sinitizedHtml = useMemo(() => DOMpurify.sanitize(textContent), [textContent]);
+    const sinitizedHtml = useMemo(() => DOMPurify.sanitize(textContent), [textContent]);
     useEffect(() => {
         if (readMoreRef.current) {
             requestAnimationFrame(() => {
